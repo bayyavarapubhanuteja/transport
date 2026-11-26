@@ -1,0 +1,12 @@
+.env
+**/.env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.db
+frontend/node_modules/
+frontend/dist/
+.DS_Store
+.vscode/
+data/raw/gtfs/stop_times.txt

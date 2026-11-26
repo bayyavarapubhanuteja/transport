@@ -1,0 +1,37 @@
+{
+  "model_type": "RandomForestRegressor",
+  "features": [
+    "distance_m",
+    "hour",
+    "day_of_week",
+    "is_weekend",
+    "is_peak_hour",
+    "historical_avg_speed_kmh"
+  ],
+  "train_samples": 39900,
+  "test_samples": 19000,
+  "split_strategy": "time_based_split (Train: Oct 1-21, Held-out Test: Oct 22-31)",
+  "models": {
+    "baseline_historical_avg": {
+      "mae_seconds": 31.22,
+      "rmse_seconds": 51.4,
+      "mape_percent": 22.83,
+      "r2_score": 0.8501
+    },
+    "random_forest": {
+      "mae_seconds": 10.96,
+      "rmse_seconds": 21.77,
+      "mape_percent": 7.37,
+      "r2_score": 0.9731,
+      "improvement_vs_baseline_pct": 64.9
+    }
+  },
+  "feature_importances": {
+    "distance_m": 0.8801046391338596,
+    "hour": 0.03453461314516101,
+    "day_of_week": 0.0038803721019207717,
+    "is_weekend": 0.0012251526782834487,
+    "is_peak_hour": 0.08025522294077521,
+    "historical_avg_speed_kmh": 0.0
+  }
+}
